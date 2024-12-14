@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task2Activity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="152dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="207dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="49dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCountry"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerCountry"
+        android:layout_width="188dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="3dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/autoCompleteCity"
+        app:layout_constraintStart_toEndOf="@+id/textCountry" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteCity"
+        android:layout_width="315dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="14dp"
+        android:hint="City"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxTerms"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTerms"
+        android:layout_width="316dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="13dp"
+        android:text="I agree to terms and conditions"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSubmit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="228dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="86dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="12dp"
+        android:text="Gender"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCountry"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Gender" />
+
+    <EditText
+        android:id="@+id/editFullname"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="Fullname"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="314dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFullname" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="314dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <TextView
+        android:id="@+id/textCountry"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="15dp"
+        android:text="Country"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGender" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
